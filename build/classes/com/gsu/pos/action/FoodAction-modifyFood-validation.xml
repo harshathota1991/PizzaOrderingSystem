@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd"> 
+
+
+<validators>
+
+<field name="foodBean.quantity">
+<field-validator type="required"><message key="errors.required"/></field-validator>
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">1000</param>
+			<message key="errors.rangeQuantity"/>
+		</field-validator>
+	</field>	
+
+
+ <field name="foodBean.price">  
+              <field-validator type="double">  
+                <param name="minInclusive">100.0</param>  
+                 <param name="maxInclusive">10000.0</param>  
+               <message>Price must be between ${minInclusive} and ${maxInclusive}</message>  
+        </field-validator>  
+          </field>  
+
+
+
+</validators>

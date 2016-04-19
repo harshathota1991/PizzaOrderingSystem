@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd"> 
+
+
+<validators>
+
+<field name="storebean.street">
+<field-validator type="requiredstring" >
+<message key="errors.required">
+</message>
+</field-validator>
+</field>
+
+<field name="storebean.city">
+<field-validator type="requiredstring" >
+<message key="errors.required">
+</message>
+</field-validator>
+</field>
+
+<field name="storebean.state">
+<field-validator type="requiredstring" >
+<message key="errors.required">
+</message>
+</field-validator>
+</field>
+
+<field name="storebean.pincode">
+<field-validator type="requiredstring" >
+<message key="errors.required">
+</message>
+</field-validator>
+<field-validator type="regex"><param name="expression">[\d]{6}</param><message key="errors.invalidPincode"></message></field-validator>
+</field>
+
+
+<field name="storebean.mobileNo">
+<field-validator type="requiredstring"><message key="errors.requiredPhone"></message></field-validator>
+<field-validator type="regex"><param name="expression">[9|8|7][\d]{9}</param><message key="errors.invalidPhone"></message></field-validator>
+</field>
+
+
+</validators>

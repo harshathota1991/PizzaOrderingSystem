@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<!-- <constant name="struts.devMode" value="false" /> -->
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+	
+
+	<package name="default" extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="login" class="com.gsu.pos.action.CredentialsAction">
+			<result name="A" type="tiles">adminLogin</result>
+			<result name="C" type="tiles">Customer</result>
+			<result name="INVALID">LoginMain.jsp</result>
+			<result name="FAIL">errorPage.jsp</result>
+			<result name="input">LoginMain.jsp</result>
+		</action>
+		
+		
+		<action name="viewStoreLink" class="com.gsu.pos.action.StoreAction">
+			<result name="SUCCESS" type="tiles">ViewStore</result>
+		</action>
+
+		<action name="viewAllStoreId" class="com.gsu.pos.action.StoreAction">
+			<result name="SUCCESS" type="tiles">viewAllStoreId</result>
+		</action>
+
+		<action name="viewByStoreId" class="com.gsu.pos.action.StoreAction">
+			<result name="SUCCESS">StoreModify.jsp</result>
+		</action>
+
+
+		<action name="modifyStore" class="com.gsu.pos.action.StoreAction">
+			<result name="SUCCESS" type="tiles">Success</result>
+			<result name="input" type="tiles">StoreModify</result>
+		</action>
+
+
+		<action name="viewAllStoreIdDelete" class="com.gsu.pos.action.StoreAction">
+			<result name="SUCCESS" type="tiles">viewAllStoreId1</result>
+		</action>
+
+		<action name="viewByStoreId1" class="com.gsu.pos.action.StoreAction">
+			<result name="SUCCESS">StoreDelete.jsp</result>
+		</action>
+
+		<action name="deleteStore" class="com.gsu.pos.action.StoreAction">
+			<result name="SUCCESS" type="tiles">Success</result>
+			<result name="INVALID" type="tiles">invalidDelete</result>
+		</action>
+
+		<action name="viewFoodLink" class="com.gsu.pos.action.FoodAction">
+			<result name="SUCCESS" type="tiles">ViewFood</result>
+		</action>
+
+		<action name="viewAllFoodIdDelete" class="com.gsu.pos.action.FoodAction">
+			<result name="SUCCESS" type="tiles">viewAllFoodId1</result>
+		</action>
+
+		<action name="viewByFoodId1" class="com.gsu.pos.action.FoodAction">
+			<result name="SUCCESS">FoodDelete.jsp</result>
+		</action>
+
+		<action name="deleteFood" class="com.gsu.pos.action.FoodAction">
+			<result name="SUCCESS" type="tiles">Success</result>
+			<result name="INVALID" type="tiles">invalidDelete</result>
+		</action>
+
+
+
+		<action name="viewAllFoodId" class="com.gsu.pos.action.FoodAction">
+			<result name="SUCCESS" type="tiles">viewAllFoodId</result>
+		</action>
+
+		<action name="viewByFoodId" class="com.gsu.pos.action.FoodAction">
+			<result name="SUCCESS">FoodModify.jsp</result>
+		</action>
+
+
+		<action name="modifyFood" class="com.gsu.pos.action.FoodAction">
+			<result name="SUCCESS" type="tiles">Success</result>
+			<result name="input" type="tiles">FoodModify</result>
+		</action>
+
+
+		<action name="*Link" method="{1}" class="com.gsu.pos.action.LinkAction">
+			<result name="addFood" type="tiles">addFood</result>
+			<result name="addStore" type="tiles">addStore</result>
+			<result name="viewStoreId" type="tiles">addStore</result>
+			<result name="changepasswordAdmin" type="tiles">changepasswordAdmin</result>
+			<result name="changePasswordCustomer" type="tiles">changePasswordCustomer</result>
+			
+		</action>
+
+		<action name="register" class="com.gsu.pos.action.ProfileAction">
+			<result name="SUCCESS">LoginMain.jsp</result>
+			<result name="FAIL">registrationFailed.jsp</result>
+			<result name="input">register.jsp</result>
+		</action>
+		<action name="logout" class="com.gsu.pos.action.CredentialsAction">
+			<result name="SUCCESS">LoginMain.jsp</result>
+			<result name="INVALID" type="tiles">Error</result>
+		</action>
+		
+		<action name="changePassword" class="com.gsu.pos.action.CredentialsAction">
+			<result name="SUCCESS">LoginMain.jsp</result>
+			<result name="FAIL" type="tiles">Error</result>
+			<result name="INVALID" type="tiles">changePassword</result>
+			<result name="input" type="tiles">changePassword</result>
+		</action>
+		
+		<action name="changePasswordCustomerX" class="com.gsu.pos.action.CredentialsAction">
+			<result name="SUCCESS">LoginMain.jsp</result>
+			<result name="FAIL" type="tiles">Error</result>
+			<result name="INVALID" type="tiles">changePasswordCustomer</result>
+			<result name="input" type="tiles">changePasswordCustomer</result>
+		</action>
+		
+		<action name="addStore" class="com.gsu.pos.action.StoreAction">
+			<result name="SUCCESS" type="tiles">Success</result>
+			<result name="FAIL">errorPage.jsp</result>
+			<result name="INVALID">registrationFailed.jsp</result>
+			<result name="input" type="tiles">addStore</result>
+		</action>
+		<action name="addFoodDetails" class="com.gsu.pos.action.FoodAction">
+			<result name="SUCCESS" type="tiles">Success</result>
+			<result name="FAIL">errorPage.jsp</result>
+			<result name="INVALID">registrationFailed.jsp</result>
+			<result name="input" type="tiles">addFood</result>
+		</action>
+		
+		
+		
+		
+		<action name="addCity" class="com.gsu.pos.action.CartAction">
+		<result name="SUCCESS" type="tiles" >dispCity</result>
+		</action>
+		
+		
+		<action name="viewStoreIdByCity" class="com.gsu.pos.action.CartAction">
+		<result name="SUCCESS">/DisplayStore.jsp</result>
+		</action>
+		
+		<action name="viewFoodDetails" class="com.gsu.pos.action.CartAction">
+		<result name="SUCCESS" type="tiles">displayFood</result>	
+			<result name="INVALID" type="tiles">invalid1</result>	
+			<result name="FAIL" type="tiles">fail1</result>
+					
+		</action>
+		<action name="viewFoodDetails2" class="com.gsu.pos.action.CartAction">
+		<result name="SUCCESS" type="tiles">displayFood</result>	
+			<result name="INVALID" type="tiles">invalid1</result>	
+			<result name="FAIL" type="tiles">fail1</result>
+					
+		</action>
+		<action name="viewFoodDetails11" class="com.gsu.pos.action.CartAction">
+		<result name="SUCCESS" type="tiles">displayFood</result>	
+			<result name="INVALID" type="tiles">invalid1</result>	
+			<result name="FAIL" type="tiles">fail1</result>
+					
+		</action>
+		
+		<action name="addCart" class="com.gsu.pos.action.CartAction">
+		<result name="SUCCESS" type="tiles">DisplayCartDetails</result>	
+		<result name="INVALID" type="tiles">invalid1</result>	
+		<result name="input" type="tiles">displayFood</result>	
+		<result name="showCart" type="tiles">displayFood</result>	
+	
+		</action>
+		
+		<action name="modifyCart" class="com.gsu.pos.action.CartAction">
+		<result name="SUCCESS" type="tiles">ModifyCart</result>	
+			<result name="INVALID" type="tiles">invalid1</result>	
+			<result name="FAIL" type="tiles">fail1</result>	
+		</action>	
+
+		<action name="modifyCartDetails" class="com.gsu.pos.action.CartAction">
+		<result name="SUCCESS" type="tiles">ModifyCartDetails</result>	
+			<result name="INVALID" type="tiles">invalid1</result>	
+			<result name="FAIL" type="tiles">fail1</result>	
+			<result name="showCart" type="tiles">DisplayCartDetails</result>
+		</action>
+		
+		<action name="confirmCart" class="com.gsu.pos.action.CartAction">
+		<result name="SUCCESS" type="tiles">DisplayOrderDetails</result>	
+			<result name="INVALID" type="tiles">invalid1</result>
+			<result name="FAIL" type="tiles">fail1</result>		
+		</action>
+		
+		<action name="CreditCard111" class="com.gsu.pos.action.CreditCartAction">
+		<result name="SUCCESS" type="tiles">Success1</result>	
+			<result name="INVALID" type="tiles">invalid1</result>	
+			<result name="FAIL" type="tiles">fail1</result>	
+			<result name="input" type="tiles">creditcard</result>
+		</action>
+		
+		
+		<action name="payement" class="com.gsu.pos.action.LinkAction" method="pay">
+		<result name="SUCCESS" type="tiles">payement</result>	
+		<result name="INVALID" type="tiles">invalid1</result>		
+		<result name="FAIL" type="tiles">fail1</result>
+		<result name="input" type="tiles">payement</result>
+		</action>
+		
+		<action name="orderCancel" class="com.gsu.pos.action.OrderAction" >
+		<result name="SUCCESS" type="tiles">orderCancel</result>		
+		</action>
+		<action name="deleteOrder" class="com.gsu.pos.action.OrderAction" >
+		<result name="SUCCESS" type="tiles">Success1</result>		
+		</action>
+		
+		
+		<action name="viewAllOrderDetails" class="com.gsu.pos.action.OrderAction" >
+		<result name="SUCCESS" type="tiles">viewAllOrderDetails</result>		
+		<result name="INVALID" type="tiles">invalidOrder</result>
+		</action>
+		
+		
+		
+		<action name="orderProcess" class="com.gsu.pos.action.OrderAction" >
+		<result name="SUCCESS" type="tiles">orderProcess</result>		
+		
+		</action>
+
+	</package>
+</struts>

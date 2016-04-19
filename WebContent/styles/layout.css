@@ -1,0 +1,66 @@
+div.container {
+	margin-left:auto;
+	margin-right:auto;
+	width:1000px;
+}
+div.header {
+	background-color:#C2D6FF;
+	text-align:center;
+	height:130px;	
+}
+div.header2left {	
+	background-color:#FFFFAD;
+	float:left;
+	height:60px;
+	width:200px;
+}
+div.header2right {
+	background-color:#FFFFAD;
+	float:right;
+	text-align:right;
+	height:60px;
+	width:800px;
+}
+div.menu {
+	background-color:#E9E9E9;
+	height:850px;
+	width:200px;
+	float:left;
+}
+div.content {
+	background-color:#C2E0FF;
+	height:850px;
+	width:800px;
+	float:left;						
+	text-align:center;
+}
+div.indexLeft {
+	background-color:#DAFFDA;
+	height:850px;
+	width:500px;
+	float:left;
+}
+div.indexRight {
+	background-color:#E5FFFF;
+	height:850px;
+	width:500px;
+	float:left;
+	text-align:center;
+}
+div.footer {
+	background-color:#FFFFAD;
+	clear:both;
+	text-align:center;
+	height:60px;
+}
+div.registerContent {
+	background-color:#E5FFFF;
+	height:850px;
+	width:1000px;
+	float:left;						
+	text-align:center;
+	
+}
+a {
+	text-decoration:none;
+}

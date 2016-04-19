@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd"> 
+
+
+<validators>
+
+ <field name="name">
+		<field-validator type="requiredstring">
+			<message key="errors.required"/>
+		</field-validator>
+	</field>	
+
+ <field name="type">
+		<field-validator type="required">
+			<message key="errors.required"/>
+		</field-validator>
+	</field>
+	
+<field name="quantity">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">1000</param>
+			<message key="errors.rangeQuantity"/>
+		</field-validator>
+	</field>	
+
+
+
+<field name="price">
+		<field-validator type="double">
+			<param name="min">1</param>
+			<param name="max">10000</param>
+			<message key="errors.rangePrice"/>
+		</field-validator>
+	</field>
+
+
+</validators>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="adminBaseLayout" template="/baseLayout.jsp">
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="header" value="/newHeader.jsp" />
+		<put-attribute name="menu" value="/AdminMenu.jsp" />
+		<put-attribute name="body" value="/AdminBody.jsp" />
+		<put-attribute name="footer" value="/footer.jsp" />
+	</definition>
+
+
+
+
+	<definition name="customerBaseLayout" template="/baseLayout.jsp">
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="header" value="/headerCustomer.jsp" />
+		<put-attribute name="menu" value="/CustomerMenu.jsp" />
+		<put-attribute name="body" value="/CustomerBody.jsp" />
+		<put-attribute name="footer" value="/footer.jsp" />
+	</definition>	
+	
+	<definition name="changepasswordAdmin" extends="adminBaseLayout">
+		<put-attribute name="body" value="/changePassword.jsp" />
+	</definition>
+
+	<definition name="changepasswordCustomer" extends="customerBaseLayout">
+		<put-attribute name="body" value="/changePassword.jsp" />
+	</definition>
+
+	<definition name="adminLogin" extends="adminBaseLayout">
+		<put-attribute name="body" value="/adminLogin.jsp" />
+	</definition>
+
+
+
+	<definition name="Customer" extends="customerBaseLayout">
+		<put-attribute name="body" value="/CustomerBody.jsp" />
+	</definition>
+
+
+
+	<definition name="addStore" extends="adminBaseLayout">
+		<put-attribute name="body" value="/storeCreate.jsp" />
+	</definition>
+
+	<definition name="addFood" extends="adminBaseLayout">
+		<put-attribute name="body" value="/addFoodItems.jsp" />
+	</definition>
+
+
+	<definition name="ViewStore" extends="adminBaseLayout">
+		<put-attribute name="body" value="/ViewStoreDetails.jsp" />
+	</definition>
+
+	<definition name="ViewFood" extends="adminBaseLayout">
+		<put-attribute name="body" value="/ViewFoodDetails.jsp" />
+	</definition>
+
+	<definition name="Error" extends="adminBaseLayout">
+		<put-attribute name="body" value="/Error.jsp" />
+	</definition>
+
+	<definition name="Success" extends="adminBaseLayout">
+		<put-attribute name="body" value="/Success.jsp" />
+	</definition>
+
+	<definition name="changePassword" extends="adminBaseLayout">
+		<put-attribute name="body" value="/changePassword.jsp" />
+	</definition>
+	<definition name="changePasswordCustomer" extends="customerBaseLayout">
+		<put-attribute name="body" value="/ChangePasswordCustomer.jsp"/>
+	</definition>
+
+	<definition name="viewAllStoreId" extends="adminBaseLayout">
+		<put-attribute name="body" value="/StoreIDView.jsp" />
+	</definition>
+
+	<definition name="viewAllStoreId1" extends="adminBaseLayout">
+		<put-attribute name="body" value="/StoreIDViewForDelete.jsp" />
+	</definition>
+
+
+
+	<definition name="StoreModify" extends="adminBaseLayout">
+		<put-attribute name="body" value="/StoreModify.jsp" />
+	</definition>
+	
+	<definition name="FoodModify" extends="adminBaseLayout">
+		<put-attribute name="body" value="/FoodModify.jsp" />
+	</definition>
+
+	<definition name="viewAllFoodId1" extends="adminBaseLayout">
+		<put-attribute name="body" value="/FoodIDView.jsp" />
+	</definition>
+
+
+	<definition name="viewAllFoodId" extends="adminBaseLayout">
+		<put-attribute name="body" value="/FoodIDViewModify.jsp" />
+	</definition>
+
+
+	<definition name="dispCity" extends="customerBaseLayout">
+		<put-attribute name="body" value="/CityDetails.jsp" />
+	</definition>
+	
+	
+	<definition name="dispStores" extends="customerBaseLayout">
+	<put-attribute name="body" value="/DisplayStore.jsp"/>
+	</definition>
+
+	<definition name="displayFood" extends="customerBaseLayout">
+	<put-attribute name="body" value="/DisplayFood.jsp"/>
+	</definition>
+	
+	<definition name="DisplayCartDetails" extends="customerBaseLayout">
+	<put-attribute name="body" value="/DisplayCartDetails.jsp"/>
+	</definition>
+	
+	<definition name="ModifyCartDetails" extends="customerBaseLayout">
+	<put-attribute name="body" value="/DisplayCartDetails.jsp"/>
+	</definition>
+
+	<definition name="DisplayOrderDetails" extends="customerBaseLayout">
+	<put-attribute name="body" value="/DisplayOrderDetails.jsp"/>
+	</definition>
+
+	<definition name="payement" extends="customerBaseLayout">
+	<put-attribute name="body" value="/creditCardDetails.jsp"/>
+	</definition>
+		<definition name="orderCancel" extends="customerBaseLayout">
+	<put-attribute name="body" value="/OrderCancel.jsp"/>
+	</definition>
+	
+	<definition name="Success" extends="adminBaseLayout">
+		<put-attribute name="body" value="/Success.jsp" />
+	</definition>
+	
+	<definition name="Success1" extends="customerBaseLayout">
+		<put-attribute name="body" value="/Success1.jsp" />
+	</definition>
+	
+	<definition name="viewAllOrderDetails" extends="adminBaseLayout">
+		<put-attribute name="body" value="/AdminOrder.jsp" />
+	</definition>
+		
+	<definition name="orderProcess" extends="adminBaseLayout">
+		<put-attribute name="body" value="/Success.jsp" />
+	</definition>
+	<definition name="invalidOrder" extends="adminBaseLayout">
+		<put-attribute name="body" value="/InvalidOrders.jsp" />
+	</definition>
+	<definition name="invalid" extends="adminBaseLayout">
+		<put-attribute name="body" value="/Invalid.jsp" />
+	</definition>
+	<definition name="invalidDelete" extends="adminBaseLayout">
+		<put-attribute name="body" value="/InvalidDelete.jsp" />
+	</definition>
+	<definition name="invalid1" extends="customerBaseLayout">
+		<put-attribute name="body" value="/Invalid.jsp" />
+	</definition>
+	<definition name="fail" extends="adminBaseLayout">
+		<put-attribute name="body" value="/Fail.jsp" />
+	</definition>
+	<definition name="fail1" extends="customerBaseLayout">
+		<put-attribute name="body" value="/Fail.jsp" />
+	</definition>
+	<definition name="ModifyCart" extends="customerBaseLayout">
+	<put-attribute name="body" value="/ModifyCart.jsp"/>
+	</definition>
+	<definition name="creditcard" extends="customerBaseLayout">
+	<put-attribute name="body" value="/creditCardDetails.jsp"/>
+	</definition>
+</tiles-definitions>
