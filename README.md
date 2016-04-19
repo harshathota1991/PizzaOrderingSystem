@@ -1,2 +1,2 @@
 # PizzaOrderingSystem
-Developed two modules:  1) customer module that allows users to add, modify and delete items to cart and make payment and, 2) administrator module that enables the administrator to add, modify and delete pizza stores and menu items. 
+Developed two modules:  1) customer module that allows users to add, modify and delete items to cart and make payment and, 2) administrator module that enables the administrator to add, modify and delete pizza stores and menu items.  Developed user interfaces using JSP, HTML and CSS and used Eclipse as IDE tool to develop the application. Technologies used: MVC, Struts 2.0, JSP, CSS, HTML, JavaScript, and Oracle 11g.  
